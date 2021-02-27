@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        header {
+            width: 800px;
+            height: 100px;
+            background-color: rgb(77, 203, 241);
+            margin: 0 auto;
+        }
+
+        header div {
+            width: 200px;
+            height: 100px;
+            margin: auto;
+        }
+
+        #create {
+            display: block;
+            font-size: 36px;
+            line-height: 100px;
+            font-family: "华文琥珀";
+            text-decoration: none;
+        }
+
+        main {
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .table-responsive {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .table {
+            border-spacing: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/students/new" id="create">添加学生</a>
+        </div>
+    </header>
+    <main>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>爱好</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ each students }}
+                    <tr>
+                        <td>{{ $value.id}}</td>
+                        <td>{{ $value.name}}</td>
+                        <td>{{ $value.gender}}</td>
+                        <td>{{ $value.age}}</td>
+                        <td>{{ $value.hobbies}}</td>
+                        <td>
+                            <a href="/students/edit?id={{ $value.id}}">编辑</a>
+                            <a href="/students/delete?id={{ $value.id}}">删除</a>
+                        </td>
+                    </tr>
+                    {{ /each }}
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+
+</html>
