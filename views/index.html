@@ -8,6 +8,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <style>
+        body{
+            background-image: url(../public/1.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         header {
             width: 800px;
             height: 100px;
@@ -16,9 +21,12 @@
         }
 
         header div {
-            width: 200px;
+            width: 500px;
             height: 100px;
             margin: auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
         }
 
         #create {
@@ -27,6 +35,15 @@
             line-height: 100px;
             font-family: "华文琥珀";
             text-decoration: none;
+            color:red;
+        }
+        #login {
+            display: block;
+            font-size: 36px;
+            line-height: 100px;
+            font-family: "华文琥珀";
+            text-decoration: none;
+            color:red;
         }
 
         main {
@@ -50,6 +67,7 @@
     <header>
         <div>
             <a href="/students/new" id="create">添加学生</a>
+            <a href="/students/login" id="login">学生登录</a>
         </div>
     </header>
     <main>

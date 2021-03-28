@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body {
+            background-image: url(../public/1.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            width: 600px;
+            height: 800px;
+            margin: 0 auto;
+        }
+        .login{
+            position: relative;
+            top: 200px;
+        } 
+
+        .btn {
+            margin-top: 10px;
+            border: 1px solid rgb(77, 203, 241);
+        }
+
+        .form-group {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="login">
+            <form action="/students/edit" method="get">
+                <div class="form-group">
+                    <label for="">学号</label>
+                    <input type="text" class="form-control" id="" name="id" >
+                </div>
+                <div class="form-group">
+                    <label for="">姓名</label>
+                    <input type="text" class="form-control" id="" name="name" >
+                </div>
+                
+                <div class="form-group">
+                    <label for="">密码</label>
+                    <input type="password" class="form-control" id="" name="password" >
+                </div>
+                <button type="submit" class="btn btn-default">submit</button>
+
+            </form>
+        </div>
+
+
+    </main>
+
+</body>
+</html>

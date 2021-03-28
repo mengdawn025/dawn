@@ -26,7 +26,22 @@ router.get('/students', function (req, res) {
     })
 
 })
+router.get('/students/login', function (req, res) {
+    res.render('login.html')
 
+})
+router.post('/students/login', function (req, res) {
+    Student.findById(parseInt(req.query.id), function (err, student) {
+        if (err) {
+            return res.status(500).send('Server error.')
+        }
+        res.render('edit.html', {
+            student: student
+        })
+
+    })
+
+})
 router.get('/students/new', function (req, res) {
     res.render('new.html')
 
